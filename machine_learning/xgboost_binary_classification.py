@@ -158,11 +158,11 @@ xgboost.plot_importance(bst)
 plt.tight_layout()
 
 importance_png_path = os.path.join(
-    PROJECT_ROOT, "outputs", "xgboost_feature_importance.png"
+    PROJECT_ROOT, "outputs","temp","xgboost_binary_classification", "xgboost_feature_importance.png"
 )
 os.makedirs(os.path.dirname(importance_png_path), exist_ok=True)
 plt.savefig(importance_png_path, bbox_inches="tight")
-plt.show()
+
 
 save_run_outputs(
     model_name="XGBoost",
@@ -191,4 +191,3 @@ save_run_outputs(
 if __name__ == "__main__":
     # 直接執行此檔案即可跑完 XGBoost 演算法範例。
     pass
-

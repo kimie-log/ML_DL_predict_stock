@@ -141,11 +141,10 @@ plt.title("Feature Importance of Random Forest", fontsize=15)
 plt.tight_layout()
 
 importance_png_path = os.path.join(
-    PROJECT_ROOT, "outputs", "random_forest_feature_importance.png"
+    PROJECT_ROOT, "outputs","temp","random_forest", "random_forest_feature_importance.png"
 )
 os.makedirs(os.path.dirname(importance_png_path), exist_ok=True)
 plt.savefig(importance_png_path, bbox_inches="tight")
-plt.show()
 
 # 儲存本次實驗的文字報告與重要性圖
 save_run_outputs(
@@ -176,4 +175,3 @@ save_run_outputs(
 if __name__ == "__main__":
     # 直接執行此檔案即可跑完隨機森林範例。
     pass
-

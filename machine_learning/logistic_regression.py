@@ -108,6 +108,14 @@ log_experiment(
     config=config,
 )
 
+plots_dir = os.path.join(PROJECT_ROOT, "outputs","temp","logistic_regression")
+os.makedirs(plots_dir, exist_ok=True)
+
+train_plot_path = os.path.join(plots_dir, "train.png")
+valid_plot_path = os.path.join(plots_dir, "valid.png")
+test_plot_path = os.path.join(plots_dir, "test.png")
+
+
 # 將完整分類報告輸出到 report/{timestamp}/machine_learning_LogisticRegression/
 save_run_outputs(
     model_name="LogisticRegression",
@@ -117,7 +125,7 @@ save_run_outputs(
         "valid_classification_report": report_valid_str,
         "test_classification_report": report_test_str,
     },
-    artifact_paths=[],
+    artifact_paths=[train_plot_path, valid_plot_path, test_plot_path],
     params={
         "TICKER": config.get("TICKER"),
         "START_DATE": config.get("START_DATE"),
@@ -154,4 +162,3 @@ log_experiment(
 if __name__ == "__main__":
     # 直接執行此檔案即可跑完整個邏輯迴歸流程。
     pass
-

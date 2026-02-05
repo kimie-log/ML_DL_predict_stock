@@ -141,11 +141,10 @@ plot_tree(
 plt.title("Decision Tree (First 3 Levels)")
 
 # 先將樹圖存成檔案，再顯示
-tree_png_path = os.path.join(PROJECT_ROOT, "outputs", "decision_tree_first3_levels.png")
+tree_png_path = os.path.join(PROJECT_ROOT, "outputs", "temp","decision_tree", "decision_tree_first3_levels.png")
 os.makedirs(os.path.dirname(tree_png_path), exist_ok=True)
 plt.tight_layout()
 plt.savefig(tree_png_path, bbox_inches="tight")
-plt.show()
 
 # 使用通用工具函式儲存本次實驗的報表與圖檔
 save_run_outputs(
@@ -175,4 +174,3 @@ save_run_outputs(
 if __name__ == "__main__":
     # 直接執行此檔案即可跑完決策樹範例。
     pass
-

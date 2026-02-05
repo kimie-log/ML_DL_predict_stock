@@ -117,7 +117,7 @@ log_experiment(
 # %%
 # 視覺化真實值與預測值的折線圖，分別針對訓練集 / 驗證集 / 測試集。
 
-plots_dir = os.path.join(PROJECT_ROOT, "outputs", "linear_regression")
+plots_dir = os.path.join(PROJECT_ROOT, "outputs","temp","linear_regression")
 os.makedirs(plots_dir, exist_ok=True)
 
 train_plot_path = os.path.join(plots_dir, "train.png")
@@ -175,4 +175,3 @@ if __name__ == "__main__":
     # 直接執行此檔案即可跑完整個流程。
     # 由於所有程式碼都在頂層，這裡不需額外呼叫函式。
     pass
-
