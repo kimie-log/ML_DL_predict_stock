@@ -12,15 +12,6 @@ train-lstm:
 	python deep_learning/lstm_cnn.py
 	python deep_learning/attention_model.py
 
-compare-models:
-	python compare_models.py
-
-rolling-eval:
-	python rolling_evaluation_random_forest.py
-
-simple-backtest:
-	python simple_strategy_backtest_logistic.py
-
 test:
 	pytest -q
 
