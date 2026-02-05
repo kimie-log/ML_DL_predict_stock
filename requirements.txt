@@ -1,0 +1,20 @@
+# 基本套件
+numpy
+pandas
+
+# 視覺化套件
+matplotlib
+
+# 機器學習套件
+scikit-learn
+xgboost
+
+
+# 金融資料套件
+yfinance
+
+# 深度學習套件
+torch
+tensorboard
+
+
